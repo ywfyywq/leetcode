@@ -3,7 +3,48 @@ package com.xyz0751.learn.leetcode.dp;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 5. 最长回文子串
+ *
+ * 难度 中等
+ *
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
+ *
+ *
+ *
+ * 示例 1：
+ *
+ * 输入：s = "babad"
+ * 输出："bab"
+ * 解释："aba" 同样是符合题意的答案。
+ * 示例 2：
+ *
+ * 输入：s = "cbbd"
+ * 输出："bb"
+ * 示例 3：
+ *
+ * 输入：s = "a"
+ * 输出："a"
+ * 示例 4：
+ *
+ * 输入：s = "ac"
+ * 输出："a"
+ *
+ *
+ * 提示：
+ *
+ * 1 <= s.length <= 1000
+ * s 仅由数字和英文字母（大写和/或小写）组成
+ *
+ * @author YY
+ */
 public class LongestPalindrome {
+
+    /**
+     * 动态规划
+     * @param s
+     * @return
+     */
     public static String longestPalindrome2(String s) {
         if (s.length() <= 1) {
             return s;
@@ -26,6 +67,12 @@ public class LongestPalindrome {
 
         return longestPalindrome;
     }
+
+    /**
+     * 中心扩展算法
+     * @param s
+     * @return
+     */
     public static String longestPalindrome3(String s) {
         String longestPalindrome = "";
         for (int i=0; i<s.length(); i++) {
@@ -76,6 +123,11 @@ public class LongestPalindrome {
         return s.substring(pl, pr+1);
     }
 
+    /**
+     * Manacher 算法
+     * @param s
+     * @return
+     */
     public static String longestPalindrome(String s) {
         StringBuilder sb = new StringBuilder();
         sb.append("#");
