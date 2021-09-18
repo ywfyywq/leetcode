@@ -34,8 +34,8 @@ package com.xyz0751.learn.leetcode.dp;
  *
  * 提示：
  *
- * m == obstacleGrid.length
- * n == obstacleGrid[i].length
+ * m == obstacleGrid.length
+ * n == obstacleGrid[i].length
  * 1 <= m, n <= 100
  * obstacleGrid[i][j] 为 0 或 1
  *
